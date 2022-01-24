@@ -8,13 +8,15 @@ function runLengthEncoding(string) {
   for (let i = 1; i < string.length; i++) {
     const curr = string[i];
     const prev = string[i - 1];
+    //  two base case
 
     if (curr !== prev || count === 9) {
       runLengthEncodingArray.push(count.toString());
       runLengthEncodingArray.push(prev);
       count = 0;
     }
-
+    // increment  count till one of the condition is met
+    //  repeat.
     count++;
 
     // if (
